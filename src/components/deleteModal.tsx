@@ -1,7 +1,7 @@
 
-import { useEffect, useState } from "react";
+
 import type { ModalInterface } from "./config";
-import { useConten } from "../hook/content";
+
 
 
 export const DeleteModal=(props:ModalInterface)=>{

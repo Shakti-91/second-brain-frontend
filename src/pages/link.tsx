@@ -1,43 +1,26 @@
 // searching ke option ka kaam kar le 
-import { ShareIcon, PlusIcon } from "../assets/Icons"
-import Button from "../components/Button"
+
 import { Card } from "../components/card"
 import { Sidebar } from "../components/sidebar"
-import { Tweet } from "../assets/Icons"
+
 import { useEffect, useState } from "react"
 import { Modal } from "../components/addModal"
 import { useConten } from "../hook/content"
-import axios from "axios"
-import { ShareModal } from "../components/sharemodal"
-import { backend_url } from "../components/url"
-import { DeleteModal } from "../components/deleteModal"
-import { EditModal } from "../components/editModal"
+
+
+
 export const LinkPage=()=>{
   const[openModal,setModal]=useState(false);
   const {contents,getContent}=useConten();
   const [cr,setCr]=useState(false);
-  const [share,setShare]=useState(false);
-   const [link,setLink]=useState('');
+  
    const [render,setRender]=useState(false);
   useEffect(()=>{
     getContent();
   },[openModal,cr,render]);
     
-  async function shareContent(){
-    try{
-    const res= await axios.post(`${backend_url}/api/v1/share`,null,{
-      headers:{
-                'authorization':localStorage.getItem('token')
-              }
-    })
-    setLink(`${res.data.link_share}`);
-    
-    setShare(true);
-  }catch(error:any){
-    console.log('server crash');
-    return;
-  }
-  }
+ 
+  
  
     return (
         

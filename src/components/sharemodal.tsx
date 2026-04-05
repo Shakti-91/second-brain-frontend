@@ -1,11 +1,11 @@
 
 import { useState } from "react"
-import { CrossIcon, Youtube } from "../assets/Icons"
-import Button from "./Button"
-import { useRef } from "react"
+import { CrossIcon, } from "../assets/Icons"
+
+
 import type { ModalInterface } from "./config"
-import axios from "axios"
-import { backend_url } from "./url"
+
+
 
 export const ShareModal=(props:ModalInterface)=>{
    

@@ -1,11 +1,11 @@
 
 import { useState } from "react"
-import { CrossIcon, Youtube } from "../assets/Icons"
+import { CrossIcon } from "../assets/Icons"
 import Button from "./Button"
 import { useRef } from "react"
 import type { ModalInterface } from "./config"
-import axios from "axios"
-import { backend_url } from "./url"
+
+
 import { useUpdate } from "../hook/useUpdate"
 interface editInterface{
     title:string,

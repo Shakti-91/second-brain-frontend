@@ -2,7 +2,7 @@ import { DelteIcon, Youtube,Link,Tweet, LinkIcon, HyperLink} from "../assets/Ico
 import type { CardInterface } from "./config"
 import { EditIcon } from "../assets/Icons"
 import { useState } from "react";
-import { Sidebar } from "./sidebar";
+
 import { DeleteModal } from "./deleteModal";
 import { backend_url } from "./url";
 import axios from "axios";
