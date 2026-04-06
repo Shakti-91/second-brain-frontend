@@ -1,1 +1,1 @@
-export const backend_url="http://44.211.32.96:3000"
+export const backend_url="https://second-brain-backend.noobdevs.codes"
