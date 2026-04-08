@@ -32,7 +32,7 @@ export const TweetPage=()=>{
     <Sidebar/>
     <div className='h-screen w-full ml-68 pt-12 flex pl-12 flex-col gap-12 pr-8'>
       <div className='flex  justify-between items-center '>
-        <h1 className='font-extrabold text-4xl'>ALL LINKS</h1>
+        <h1 className='font-extrabold text-4xl'>TWEETS</h1>
          <div className='flex gap-3'>
          
           
