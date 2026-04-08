@@ -4,6 +4,7 @@ import { Tweet } from "../assets/Icons"
 import { Youtube} from "../assets/Icons"
 import { Link} from "../assets/Icons"
 import { useNavigate } from "react-router-dom"
+import { LogOut } from "../assets/Icons"
 
 export const Sidebar=()=>{
     const navigate=useNavigate();
@@ -11,10 +12,10 @@ export const Sidebar=()=>{
     return(
         <div className=" w-68 border-r-2 pl-4 flex flex-col gap-8 fixed top-0  left-0 h-screen border-gray-200">
             <div className="flex pt-8   items-center">
-                <div className="text-blue-400">
+                <div className="text-blue-400 cursor-pointer" onClick={()=>navigate('/homepage')}>
                <BrainIcon/>
                </div>
-               <h1 className="text-2xl font-semibold">Second Brain</h1> 
+               <h1 className="text-2xl font-semibold cursor-pointer" onClick={()=>navigate('/homepage')}>Second Brain</h1> 
             </div>
             <div className="flex ml-2 flex-col gap-4 ">
                 <input onKeyDown={(e)=>{if(e.key=== "Enter"){
@@ -38,6 +39,15 @@ export const Sidebar=()=>{
                     <Link/>
                     </div>
                     <h1 className="text-xl ml-1 font-normal text-gray-500">Links</h1>
+                </div>
+                <div onClick={()=>{
+                    localStorage.setItem("token", "");
+                    navigate('/signup')
+                }} className="flex items-center cursor-pointer hover:underline">
+                     <div className="h-5 pt-0.5 w-5">
+                    <LogOut/>
+                    </div>
+                    <h1 className="text-xl ml-1 font-normal text-gray-500">LogOut</h1>
                 </div>
             </div>
             

@@ -16,6 +16,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SignUp />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path='/homepage' element={<HomePage/>}/>
         <Route path='/share/:sharelink' element={<Shareduser/>}/>

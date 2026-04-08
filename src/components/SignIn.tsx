@@ -6,6 +6,7 @@ import { backend_url } from "./url";
 export const SignIn=()=>{
     const navigate=useNavigate();
     const [error,setError]=useState('');
+    
     const usernameRef=useRef<HTMLInputElement|null>(null);
    const passwordRef=useRef<HTMLInputElement|null>(null);
     async function signin(){
@@ -22,6 +23,7 @@ export const SignIn=()=>{
       })
       
       localStorage.setItem("token", res.data.token);
+      
       navigate('/homepage')
     }catch(error:any){
         if( error.response?.status==400){

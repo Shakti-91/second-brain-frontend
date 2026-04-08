@@ -2,7 +2,7 @@ import { ShareIcon, PlusIcon } from "../assets/Icons"
 import Button from "./Button"
 import { Card } from "./card"
 import { Sidebar } from "./sidebar"
-
+import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { Modal } from "./addModal"
 import { useConten } from "../hook/content"
@@ -11,6 +11,22 @@ import { ShareModal } from "./sharemodal"
 import { backend_url } from "./url"
 
 export const HomePage=()=>{
+  const navigate=useNavigate();
+  if(localStorage.token==""){
+     return (
+      <div className="h-screen w-full flex justify-center items-center">
+      <h1 className="text-5xl">
+      You are not verified, please{" "}
+      <span
+        onClick={() => navigate("/signin")}
+        className="text-blue-400 underline cursor-pointer hover:underline-offset-4"
+      >
+        re-login
+      </span>
+    </h1>
+    </div>
+     )
+  }
   const[openModal,setModal]=useState(false);
   const {contents,getContent}=useConten();
   const [cr,setCr]=useState(false);
